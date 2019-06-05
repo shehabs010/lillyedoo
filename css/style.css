@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "CeraProRegular";
+  src: url("../fonts/CeraProRegular.eot");
+  src: url("../fonts/CeraProRegular.woff") format("woff"), url("../fonts/CeraProRegular.otf") format("opentype"), url("../fonts/CeraProRegular.svg#filename") format("svg");
+}
+
+@font-face {
+  font-family: "MuseoRegular";
+  src: url("../fonts/MuseoRegular.eot");
+  src: url("../fonts/MuseoRegular.woff") format("woff"), url("../fonts/MuseoRegular.otf") format("opentype"), url("../fonts/MuseoRegular.svg#filename") format("svg");
+}
+
+body {
+  font-family: 'CeraProRegular';
+}
+
+.home-background {
+  background: url(../img/lillydoo-bg.jpg) no-repeat;
+  max-height: 550px;
+  width: 100%;
+  height: 37vw;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.home-background h1 {
+  font-family: 'MuseoRegular';
+  font-size: 2.625rem;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.home-background a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #00afab;
+  color: #fff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  margin-top: 14px;
+}
+
+.home-background a:hover, .home-background a:focus, .home-background a:active {
+  background: #99dfdd;
+}
+
+.home-background .oekotex {
+  max-width: 150px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 15%;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+}
+
+.home-background .oekotex img {
+  width: 100%;
+}
+
+.products .container-fluid {
+  position: relative;
+}
+
+.products .container-fluid .oekotex-pro {
+  position: absolute;
+  left: 13%;
+  top: 11%;
+  z-index: 9;
+  width: 27%;
+}
+
+.products .container-fluid .pro-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products .container-fluid .pro-img li {
+  position: relative;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  margin-right: -100%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.products .container-fluid .pro-img li.active {
+  z-index: 2;
+  opacity: 1;
+}
+
+.products .container-fluid .pro-details h2 {
+  font-size: 1.68rem;
+}
+
+.products .container-fluid .pro-details p {
+  text-transform: uppercase;
+}
+
+.products .container-fluid .pro-details .pro-details-size li {
+  padding: 7px 5px 2px 5px;
+  margin-right: 9px;
+  cursor: pointer;
+  width: 30%;
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+  border: 1px solid #7c7c7c;
+  color: #7c7c7c;
+}
+
+.products .container-fluid .pro-details .pro-details-size li:last-child {
+  margin-right: 0px;
+}
+
+.products .container-fluid .pro-details .pro-details-size li.active {
+  background: #00afab;
+  color: #fff;
+  border: 1px solid #00afab;
+}
+
+.products .container-fluid .pro-details .pro-details-size li:hover {
+  background: #00afab;
+  color: #fff;
+  border: 1px solid #00afab;
+}
+
+.products .container-fluid .pro-details .pro-details-size li p {
+  font-size: 1.3rem;
+  line-height: 1;
+  font-family: 'CeraProRegular,Helvetica,Arial,sans-serif' !important;
+  text-align: center;
+  font-weight: 400;
+}
+
+.products .container-fluid .pro-details .pro-details-size li span {
+  font-size: 0.8rem;
+  text-align: center;
+  display: block;
+}
+
+.products .container-fluid .pro-details .pro-text p {
+  font-size: 0.92rem;
+  text-transform: capitalize;
+  line-height: 21px;
+  font-weight: 300;
+}
+
+.products .container-fluid .pro-details .pro-list {
+  list-style-type: disc;
+  font-size: .93rem;
+  padding-left: 21px;
+}
+
+.products .container-fluid .pro-details .pro-list li:first-child {
+  color: #00afab;
+  text-decoration: none;
+}
+
+.products .container-fluid .pro-details .pro-list li a {
+  color: #00afab;
+  text-decoration: none;
+}
+
+.products .container-fluid .pro-details .submit-button .button-brand-color {
+  background: #00afab;
+  color: #fff;
+  width: 100%;
+  border: 0px;
+  padding: 0.6rem .3rem;
+  margin: 20px 0;
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+}
+
+.products .container-fluid .pro-details .submit-button .button-brand-color:hover {
+  background: #99dfdd;
+}
+
+.how-works {
+  background: #f8f8f8;
+}
+
+.how-works h2 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.how-works .icon-sec img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.how-works .icon-details h3 {
+  font-size: 1.065rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  color: #000;
+}
+
+.how-works .icon-details p {
+  font-size: 0.87rem;
+  margin-bottom: 15px;
+}
+
+.how-works a {
+  font-size: 0.9rem;
+  color: #00afab;
+}
+
+.testPackage img {
+  width: 100%;
+}
+
+.testPackage h4 {
+  font-size: 1.065rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+.testPackage li {
+  font-size: 0.82rem;
+}
+
+.hide {
+  display: none;
+}
+
+.home-background {
+  background-size: cover;
+}
+
+/*from xsmall screen Tosmall screen */
+/*from small screen To mediaum screen */
+/*from mediaum screen To Larg screen */
+/*if you want tybe custom class in spacific width from any screen to infinte*/
+/*from small screen To XLarg screen */
+/*from larg screen To XLarg screen */
+/*from larg screen To XLarg screen */
+@media (min-width: 991.98px) {
+  .products .oekotex-pro {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container-fluid {
+    padding: 3rem 5rem;
+  }
+}
+
+/*from xsmall screen To small screen */
+@media (max-width: 520px) {
+  .home-background {
+    background-image: url(../img/lillydoo-bg-small.jpg) !important;
+    max-height: 550px;
+    width: 100%;
+    height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+  }
+}
+
+/*from small screen To mediaum screen */
+@media (max-width: 768px) {
+  .home-background h1 {
+    font-size: 1.6rem;
+  }
+  .pro-details-size {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .pro-details-size li {
+    padding: 7px 5px 2px 5px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 835px) {
+  .home-background {
+    background-image: url(../img/lillydoo-bg-responsive.jpg);
+    max-height: 550px;
+    width: 100%;
+    height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+  }
+  .how-works .icon-sec img {
+    width: 20%;
+  }
+  .how-works .icon-details {
+    margin-bottom: 30px;
+  }
+  .slider-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    margin-top: 26%;
+    height: 100%;
+  }
+}
+
+/*from mediaum screen To larg screen */
+@media (max-width: 1024px) {
+  .pro-list li {
+    font-size: 0.73rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

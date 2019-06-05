@@ -1,0 +1,130 @@
+/*from xsmall screen Tosmall screen */
+@media (min-width:320px) and (max-width:480px){
+
+}
+ 
+/*from small screen To mediaum screen */
+@media (min-width:520px) and (max-width:767px){
+
+}
+
+/*from mediaum screen To Larg screen */
+@media (min-width:768px) and (max-width:991px){
+
+}
+
+/*if you want tybe custom class in spacific width from any screen to infinte*/
+
+/*from small screen To XLarg screen */
+@media (min-width:520px) {
+
+}
+/*from larg screen To XLarg screen */
+@media (min-width:768px) {
+ 
+}
+
+/*from larg screen To XLarg screen */
+@media (min-width:991.98px){
+  .products{
+   
+        .oekotex-pro{
+            position: absolute;
+            left: 10%;
+            top: 0;
+            max-width: 150px;
+
+        
+      }
+    }
+
+}
+@media (min-width:1025px){
+ .container-fluid{
+      padding: 3rem 5rem;
+ }
+}
+
+/*from xsmall screen To small screen */
+@media (max-width:520px) {
+    .home-background {
+        background-image: url(../img/lillydoo-bg-small.jpg)  !important;
+          max-height: 550px; 
+          width: 100%;
+          height: 100vh;
+          background-size: cover !important;
+          background-repeat: no-repeat !important;
+          background-position: center center !important;
+             }
+   
+}
+/*from small screen To mediaum screen */
+@media (max-width:768px) {
+  .home-background {
+    h1{
+      font-size: 1.6rem;
+    }
+
+         }
+         .pro-details-size{
+           flex-wrap: wrap;
+           justify-content: flex-start !important;
+          li{
+             padding: 7px 5px 2px 5px;
+             margin-right: 7px;
+             margin-bottom: 10px;
+              cursor: pointer;
+          
+            
+            }
+          }
+
+}
+@media(max-width:835px){
+    .home-background {
+        background-image: url(../img/lillydoo-bg-responsive.jpg);
+          max-height: 550px; 
+          width: 100%;
+          height: 100vh;
+          background-size: cover !important;
+          background-repeat: no-repeat !important;
+          background-position: center center !important;
+             }
+             .how-works{
+               .icon-sec{
+                 
+                 img{
+                   width: 20%;
+                 }
+               }
+               .icon-details{
+                margin-bottom: 30px;
+               }
+             }
+             .slider-content{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              margin-top: 26%;
+              height: 100%;
+             }
+}
+/*from mediaum screen To larg screen */
+@media (max-width:991px) {
+
+}
+@media (max-width:1024px){
+  .pro-list{
+   
+    li{
+      font-size: 0.73rem;
+    }
+    
+  }
+}
+@media (min-width:1200px){
+
+}
+ 

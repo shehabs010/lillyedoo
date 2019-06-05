@@ -1,0 +1,262 @@
+// import font cera Pro Regular local 
+@font-face {
+    font-family: "CeraProRegular";
+    src: url("../fonts/CeraProRegular.eot");
+    src: 
+    url("../fonts/CeraProRegular.woff") format("woff"),
+    url("../fonts/CeraProRegular.otf") format("opentype"),
+    url("../fonts/CeraProRegular.svg#filename") format("svg");
+}
+// import font museo 300 Regular local 
+@font-face {
+    font-family: "MuseoRegular";
+    src: url("../fonts/MuseoRegular.eot");
+    src: 
+    url("../fonts/MuseoRegular.woff") format("woff"),
+    url("../fonts/MuseoRegular.otf") format("opentype"),
+    url("../fonts/MuseoRegular.svg#filename") format("svg");
+}
+$bg-btn:#00afab;
+$bg-btn-hover:#99dfdd;
+$color-wh:#fff;
+$color-gray:#7c7c7c;
+@mixin transition($type,$style,$time){
+    -webkit-transition:$type $style $time ;
+    -moz-transition:$type $style $time ;
+    -o-transition:$type $style $time ;
+    transition:$type $style $time ;
+}
+
+body{
+    font-family:'CeraProRegular';
+}
+
+.home-background{
+        background: url(../img/lillydoo-bg.jpg) no-repeat ;
+        @extend %cover;
+        max-height: 550px;
+        width: 100%;
+        height: 37vw;
+        @include transition(all,ease-in-out ,.3s );
+    h1{
+        font-family:'MuseoRegular';
+        font-size: 2.625rem;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+    a{
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color:$bg-btn ;
+        color: $color-wh;
+        font-size: 1.3rem;
+        text-decoration: none;
+        @include transition(all ,ease-in-out ,0.3s );
+        margin-top:14px;
+
+        &:hover,&:focus,&:active{
+            background:$bg-btn-hover; 
+        }
+        
+    }
+    .oekotex {
+        max-width: 150px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 15%;
+        transform: translateY(-15%);
+        img{
+            width: 100%;
+        }
+    }
+
+}
+//start products section
+.products{
+    .container-fluid{
+        position: relative;
+        .oekotex-pro{
+            position: absolute;
+            left: 13%;
+            top: 11%;
+            z-index: 9;
+            width: 27%;
+          
+        }
+        .pro-img{
+            display: flex;
+
+            li{
+                position: relative;
+                width: 100%;
+                flex:0 0 100%;
+                margin-right: -100%;
+                z-index: 1;
+                opacity: 0;
+                &.active{
+                    z-index: 2;
+                    opacity: 1;
+                }
+        }
+        }
+        .pro-details{
+            h2{
+                font-size: 1.68rem;
+                
+            }
+            p{
+                text-transform: uppercase;
+                
+            }
+            .pro-details-size{
+            li{
+               padding: 7px 5px 2px 5px;
+               margin-right: 9px;
+               cursor: pointer;
+                width: 30%;
+                @include transition(all ,ease-in-out ,0.1s );
+                border:1px solid $color-gray;
+                color:$color-gray;
+                &:last-child{
+                    margin-right: 0px;
+                }
+                &.active{
+                    background: $bg-btn;
+                    color: $color-wh;
+                    border: 1px solid $bg-btn;
+                }
+                &:hover{
+                    background: $bg-btn;
+                    color:$color-wh;
+                    border: 1px solid $bg-btn;  
+                    
+                }
+                p{
+                    font-size: 1.3rem;
+                    line-height: 1;
+                    font-family:'CeraProRegular,Helvetica,Arial,sans-serif' !important;
+                    text-align: center;
+                    font-weight: 400;
+                    
+                }
+                span{
+                    font-size: 0.8rem;
+                    text-align: center;
+                    display: block;
+                   
+                }
+            }
+        }
+            .pro-text{
+                p{
+                    font-size: 0.92rem;
+                    text-transform: capitalize;
+                    line-height:21px; 
+                    font-weight: 300;
+                
+                }
+            }
+            .pro-list{
+                list-style-type:disc;
+                font-size: .93rem;
+                padding-left:21px;
+                li{
+                    
+                    &:first-child{
+                        color:$bg-btn;
+                        text-decoration: none;
+                        
+                        
+                    }
+                    a{
+                        color:$bg-btn;
+                        text-decoration: none;
+                         
+                    }
+                   
+                }
+               
+            }
+            .submit-button{
+                .button-brand-color{
+                    background: $bg-btn;
+                    color: $color-wh;
+                    width: 100%;
+                    border:0px;
+                    padding: 0.6rem .3rem;
+                    margin: 20px 0;
+                    @include transition(all ,ease-in-out ,0.1s );
+                    &:hover{
+                        background: $bg-btn-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+//start how it works section
+.how-works{
+    background: #f8f8f8;
+    h2{
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+    .icon-sec{
+        img{
+            width: 70px;
+            margin-bottom: 15px;
+        }
+    }
+    .icon-details{
+        h3{
+            font-size: 1.065rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-style:normal;
+            text-rendering: optimizeLegibility;
+            color: #000;
+        }
+        p{
+            font-size: 0.87rem;
+            margin-bottom: 15px;
+        }
+    }
+    a{
+        font-size: 0.9rem;
+        color:$bg-btn;
+    }
+}
+//testPackage
+.testPackage{
+    img{
+        width: 100%;
+    }
+    h4{
+        font-size: 1.065rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-style:normal;
+        text-rendering: optimizeLegibility;
+    }
+    li{
+        font-size: 0.82rem;
+
+    }
+}
+.hide{
+    display: none;
+}
+// Placholder-Classes-styles
+%cover{
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover; 
+}
+
+
+
+
+@import '_media.scss';

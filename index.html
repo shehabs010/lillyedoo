@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Title -->
+     <title>Lillydoo Task</title>
+        <!-- bootstarp -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <!-- style -->
+        <link href="css/style.css" rel="stylesheet"/>
+
+  </head>
+  <body>
+    <!-- start-home-background-section -->
+    <div id="home-page-content">
+     <section class="home-background d-flex align-items-lg-center ">
+       <div class="container">
+         <div class="row">
+           <div class="col-xl-4 col-lg-5 col-md-6 col-12">
+            <div class="text-center slider-content">  
+            <h1>
+                 {{slider.Textpart1}} <br/>
+                 {{slider.Textpart2}}
+              </h1>
+              <a href="#testPaket" class="text-center">{{slider.Btn}}</a>
+            </div>
+           </div>
+           
+         </div>
+       </div>
+     </section>
+     <!-- End-Home-Background-Section -->
+     <section id="testPaket" class="products">
+       <div class="container-fluid">
+         <div class="row">
+       
+           <div class="col-md-6 col-12 mr-auto">
+             <div class="oekotex-pro">
+               <img src="img/oekotex_de.png" class="img-fluid" alt="">
+             </div>
+             <ul class="list-unstyled pro-img">
+               <li v-for="Size in ProDetails.Boxs" v-bind:class="{ active: selectedCategory==Size.name }"><img class="img-fluid" :src="Size.path" alt=""></li>
+               
+             </ul>
+            
+           </div>
+           <div class="col-md-5 col-12 pro-details">
+             <h2>{{headTitle.mainTitle}}</h2>
+             <p>{{headTitle.subTitle}}</p>
+              <ul class="list-unstyled d-flex justify-content-between  pro-details-size">
+                <li v-bind:class="{ active: selectedCategory==Size.name }" v-for="Size in ProDetails.Boxs " @click="onSelectCategory(Size.name)">
+                  <p class="mb-0">{{Size.name}}</p>
+                  <span>{{Size.size}}</span>
+                </li>
+               
+              </ul>
+              <div class="pro-text my-4">
+              <p>
+                {{ProDetails.pragraph1}}
+              </p>
+            </div>
+            <ul class="list-unstyled pro-list">
+              <li v-for="List in Lists.proList">
+                {{List.text}} <a href=""> {{List.link}}</a>
+              </li>
+              
+            </ul>
+            <div class="submit-button">
+              <button class="button-brand-color">{{headTitle.addTocart}}</button>
+            </div>
+            </div>
+
+            
+          
+         </div>
+       </div>
+     </section>
+<!-- End-Products-&-productsDetails -->
+<section class="how-works">
+  <div class="container">
+    <div class="row pt-5 pb-3">
+      <div class="col-12 text-center">
+        <h2>
+           {{howWorks.title}}
+        </h2>
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col-12 d-flex text-center flex-wrap">
+      
+
+        <div class="col-xl-4 col-lg-4 col-md-12 col-12" v-for="DeinParts in howWorks.Dein">
+            <div class="icon-sec">
+              <img :src="DeinParts.imgPath" alt="">
+            </div>
+            <div class="icon-details">
+              <h3>{{DeinParts.title}}</h3>
+              <p>
+                {{DeinParts.content1}}
+                <br/>
+                {{DeinParts.content2}}
+              </p>
+           
+              <div class="clearfix"></div>
+              <a href="" class="d-block text-center">{{DeinParts.Linkpart1}} <br/>
+                {{DeinParts.Linkpart2}} </a>
+            </div>
+          </div>
+
+      </div>
+  
+    </div>
+  </div>
+</section>
+<!-- End-how-it-works-section -->
+<section class="testPackage">
+  <div class="container-fluid">
+      <div class="row pt-5 pb-3">
+        <div class="col-12 d-flex flex-wrap">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-12 d-flex mb-4">
+            <div class="col-3 px-0">
+              <img src="img/product/blowballs.jpg" alt="">
+            </div>
+            <div class="col-8 ml-3">
+              <h4>10 LILLYDOO WINDELN
+                </h4>
+              <ul class="pl-3">
+                <li>0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz
+                  </li>
+                  <li>
+                      Extra weich und mit idealer Passform
+                  </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 col-12 d-flex mb-4">
+              <div class="col-3 px-0">
+                <img  class="" :src="Image" alt="">
+               
+              </div>
+              <div class="col-8 ml-3">
+                <h4>{{packages.title}}
+                  </h4>
+                <ul class="pl-3">
+                  <li>
+                    {{packages.orderList1}}
+                  </li>
+                  <li v-model="textContent">
+                    {{textContent}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</section>
+  </div>
+ <!-- start banner  -->
+      
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>      
