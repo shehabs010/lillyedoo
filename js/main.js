@@ -96,17 +96,17 @@ howWorks:{
    computed:{   
         Image:function(){
         var path='';
-        var text='';
+   
         if( this.selectedCategory==4 || this.selectedCategory==5){
          
           path='img/product/sensitive-wipes-2.jpg';
-          text='Extra dickes und kompostierbares Tuch';
+        
           
         }else {
           path='img/product/water-wipes-1.jpg';
-          text='Natürlich rein, extra mild, Alternative zu "Wasser & Watte"';
+          
         }
-        console.log(path)
+  
         return path;
       
         
